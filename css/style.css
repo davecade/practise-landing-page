@@ -1,6 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  width: 780px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#header .header-content .sign-up {
+  padding: .6rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#header {
+  background: #02026d;
+  color: #fff;
+}
+
+#header .hamburger {
+  position: absolute;
+  color: #fff;
+  background: #000027;
+  width: 40px;
+  height: 40px;
+  left: 20px;
+  top: 20px;
+}
+
+#header .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#header .header-content h3 {
+  margin: 1rem;
+}
+
+#header .header-content .sign-up {
+  color: #fff;
+  background: #c402c4;
+}
+
+#header .header-content .sign-up:hover {
+  opacity: 0.9;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main h3, .main p, .main ul {
+  margin: .5rem 0;
+}
+
+.main ul li {
+  margin-left: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
