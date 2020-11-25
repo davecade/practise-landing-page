@@ -8,6 +8,7 @@
 
 body {
     font-family: Poppins, sans-serif;
+    width: 100%;
 }
 
 .container {
@@ -24,58 +25,127 @@ body {
     cursor: pointer;
 }
 
-#header {
-    background: #02026d;
-    color: #fff;
 
-    .hamburger {
-        position: absolute;
-        color: #fff;
-        background: #000027;
-        width: 40px;
-        height: 40px;
-        left: 20px;
-        top: 20px;
+#slider {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #020280;
+    height: 100vh;
+    width: 200px;
+    color: #fff;
+    z-index: 1;
+    left: -200px;
+    transition: all 1s ease;
+    
+
+    .img-container {
+        width: 100px;
+        height: 100px;
+        align-self: center;
+        margin: 2rem 0;
+        
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
     }
 
-    .header-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    h3 {
+        padding: 1rem;
+        border-bottom: 1px solid #80808085;
+        cursor: pointer;
 
-        padding: 2rem;
-    
-        h3 {
-            margin: 1rem;
+        &:hover {
+            opacity: 0.9;
         }
+    }
+
+    .home {
+        border-top: 1px solid #80808085;
+        margin-top: 1rem;
+    }
+
+}
+
+
+
+#main-page {
+    position: absolute;
+    width: 100%;
+
+    #header {
+        background: #02026d;
+        color: #fff;
+        padding: 2rem 0;
     
-        .sign-up {
-            @extend %btn;
+        .hamburger {
+            position: absolute;
             color: #fff;
-            background: rgb(196, 2, 196);
+            background: #000027;
+            width: 40px;
+            height: 40px;
+            left: 20px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            cursor: pointer;
     
             &:hover {
                 opacity: 0.9;
             }
+    
+            .top, .mid, .bot {
+                background: #fff;
+                height: 2px;
+                width: 100%;
+                margin: 2.5px 0;
+            }
         }
     
-    }
-}
-
-
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    h3, p, ul {
-        margin: .5rem 0;
-    }
-
-    ul {
-        li {
-            margin-left: 3rem;
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        
+            h3 {
+                margin: 1rem;
+            }
+        
+            .sign-up {
+                @extend %btn;
+                color: #fff;
+                background: #c402c4;
+        
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        
         }
     }
+    
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        h3, p, ul {
+            margin: .5rem 0;
+        }
+    
+        ul {
+            li {
+                margin-left: 3rem;
+            }
+        }
+    }
+
 }

@@ -7,6 +7,7 @@
 
 body {
   font-family: Poppins, sans-serif;
+  width: 100%;
 }
 
 .container {
@@ -15,7 +16,7 @@ body {
   padding: 2rem;
 }
 
-#header .header-content .sign-up {
+#main-page #header .header-content .sign-up {
   padding: .6rem 1.5rem;
   border-radius: 5px;
   border: none;
@@ -23,12 +24,59 @@ body {
   cursor: pointer;
 }
 
-#header {
-  background: #02026d;
+#slider {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #020280;
+  height: 100vh;
+  width: 200px;
   color: #fff;
+  z-index: 1;
+  left: -200px;
+  transition: all 1s ease;
 }
 
-#header .hamburger {
+#slider .img-container {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  margin: 2rem 0;
+}
+
+#slider .img-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+#slider h3 {
+  padding: 1rem;
+  border-bottom: 1px solid #80808085;
+  cursor: pointer;
+}
+
+#slider h3:hover {
+  opacity: 0.9;
+}
+
+#slider .home {
+  border-top: 1px solid #80808085;
+  margin-top: 1rem;
+}
+
+#main-page {
+  position: absolute;
+  width: 100%;
+}
+
+#main-page #header {
+  background: #02026d;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+#main-page #header .hamburger {
   position: absolute;
   color: #fff;
   background: #000027;
@@ -36,9 +84,26 @@ body {
   height: 40px;
   left: 20px;
   top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
-#header .header-content {
+#main-page #header .hamburger:hover {
+  opacity: 0.9;
+}
+
+#main-page #header .hamburger .top, #main-page #header .hamburger .mid, #main-page #header .hamburger .bot {
+  background: #fff;
+  height: 2px;
+  width: 100%;
+  margin: 2.5px 0;
+}
+
+#main-page #header .header-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,30 +111,30 @@ body {
   padding: 2rem;
 }
 
-#header .header-content h3 {
+#main-page #header .header-content h3 {
   margin: 1rem;
 }
 
-#header .header-content .sign-up {
+#main-page #header .header-content .sign-up {
   color: #fff;
   background: #c402c4;
 }
 
-#header .header-content .sign-up:hover {
+#main-page #header .header-content .sign-up:hover {
   opacity: 0.9;
 }
 
-.main {
+#main-page .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.main h3, .main p, .main ul {
+#main-page .main h3, #main-page .main p, #main-page .main ul {
   margin: .5rem 0;
 }
 
-.main ul li {
+#main-page .main ul li {
   margin-left: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
