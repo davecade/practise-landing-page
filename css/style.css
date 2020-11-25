@@ -10,18 +10,24 @@ body {
   width: 100%;
 }
 
-.container {
+.main-container {
   width: 780px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-#main-page #header .header-content .sign-up {
+#main-page #header .header-content .sign-up, .modal .modal-content .submit-btn {
   padding: .6rem 1.5rem;
   border-radius: 5px;
   border: none;
   outline: none;
   cursor: pointer;
+  color: #fff;
+  background: #c402c4;
+}
+
+#main-page #header .header-content .sign-up:hover, .modal .modal-content .submit-btn:hover {
+  opacity: 0.8;
 }
 
 #slider {
@@ -116,11 +122,6 @@ body {
   margin: 1rem;
 }
 
-#main-page #header .header-content .sign-up {
-  color: #fff;
-  background: #c402c4;
-}
-
 #main-page #header .header-content .sign-up:hover {
   opacity: 0.9;
 }
@@ -137,5 +138,51 @@ body {
 
 #main-page .main ul li {
   margin-left: 3rem;
+}
+
+.modal {
+  position: absolute;
+  background: rgba(18, 18, 18, 0.5);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .modal-content {
+  width: 400px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.modal .modal-content .modal-title {
+  background: #02026d;
+  padding: 1rem;
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.modal .modal-content h4 {
+  padding: 1rem;
+}
+
+.modal .modal-content .form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.modal .modal-content .form input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.modal .modal-content .submit-btn {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
