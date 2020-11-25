@@ -34,9 +34,8 @@ body {
     height: 100vh;
     width: 200px;
     color: #fff;
-    z-index: 1;
     left: -200px;
-    transition: all 1s ease;
+    transition: all .5s ease;
     
 
     .img-container {
@@ -74,6 +73,8 @@ body {
 #main-page {
     position: absolute;
     width: 100%;
+    left: 0;
+    transition: all .5s ease;
 
     #header {
         background: #02026d;
