@@ -34,8 +34,6 @@ const App = (() => {
     }
 
     const toggleModal =() => {
-        console.log(modalEl.style.visibility)
-
         if(modalEl.style.visibility == 'hidden' && modalContentEl.style.visibility == 'hidden') {
             modalEl.style.visibility = "visible";
             modalEl.style.opacity = "1"
@@ -59,7 +57,7 @@ const App = (() => {
     }
 
     const render = () => {
-        console.log("hello World")
+        console.log("Rendering....")
     }
 
     return {
