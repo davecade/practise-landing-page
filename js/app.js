@@ -8,6 +8,7 @@ const App = (() => {
     const closeEl = document.querySelector('.close')
     const modalEl = document.querySelector('.modal')
     const modalContentEl = document.querySelector('.modal-content')
+    let canClick = true;
 
     // -- Eventlisteners
     const Eventlisteners = () => {
@@ -17,7 +18,7 @@ const App = (() => {
 
         modalEl.addEventListener('click', (event) => {
             if(event.target.matches(".modal")) {
-                toggleModal();
+                toggleModal(event);
             }
         })
     }
@@ -33,17 +34,53 @@ const App = (() => {
         }
     }
 
-    const toggleModal =() => {
+    const toggleModal =(event = null) => {
+        
         if(modalEl.style.visibility == 'hidden' && modalContentEl.style.visibility == 'hidden') {
-            modalEl.style.visibility = "visible";
-            modalEl.style.opacity = "1"
-            modalContentEl.style.visibility = "visible";
-            modalContentEl.style.opacity = "1";
-        } else {
-            modalEl.style.visibility = 'hidden';
-            modalEl.style.opacity = "0"
-            modalContentEl.style.visibility = 'hidden';
-            modalContentEl.style.opacity = "0";
+
+            console.log(event.target)
+            if(event.target.matches(".modal")) {
+
+                if(canClick === true) {
+                    modalEl.style.visibility = "visible";
+                    modalEl.style.opacity = "1";
+                    modalContentEl.style.visibility = "visible";
+                    modalContentEl.style.opacity = "1";
+                }
+
+                canClick = false
+                setTimeout(() => {
+                    canClick = true;
+                }, 1000)
+            } else {
+                modalEl.style.visibility = "visible";
+                modalEl.style.opacity = "1";
+                modalContentEl.style.visibility = "visible";
+                modalContentEl.style.opacity = "1";
+            }
+
+        } else if (modalEl.style.visibility == 'visible' && modalContentEl.style.visibility == 'visible') {
+            
+            if(event.target.matches(".modal")) {
+                if(canClick === true) {
+                    modalEl.style.visibility = 'hidden';
+                    modalEl.style.opacity = "0";
+                    modalContentEl.style.visibility = 'hidden';
+                    modalContentEl.style.opacity = "0";
+                }
+
+                canClick = false
+                setTimeout(() => {
+                    canClick = true;
+                }, 1000)
+            } else {
+                modalEl.style.visibility = 'hidden';
+                modalEl.style.opacity = "0";
+                modalContentEl.style.visibility = 'hidden';
+                modalContentEl.style.opacity = "0";
+            }
+            
+
         }
     }
 
