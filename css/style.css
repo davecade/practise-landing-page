@@ -103,7 +103,9 @@ body {
   opacity: 0.9;
 }
 
-#main-page #header .hamburger .top, #main-page #header .hamburger .mid, #main-page #header .hamburger .bot {
+#main-page #header .hamburger .top,
+#main-page #header .hamburger .mid,
+#main-page #header .hamburger .bot {
   background: #fff;
   height: 2px;
   width: 100%;
@@ -132,7 +134,9 @@ body {
   justify-content: center;
 }
 
-#main-page .main h3, #main-page .main p, #main-page .main ul {
+#main-page .main h3,
+#main-page .main p,
+#main-page .main ul {
   margin: .5rem 0;
 }
 

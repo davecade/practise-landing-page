@@ -42,14 +42,14 @@ body {
     color: #fff;
     left: -200px;
     transition: all .5s ease;
-    
+
 
     .img-container {
         width: 100px;
         height: 100px;
         align-self: center;
         margin: 2rem 0;
-        
+
         img {
             height: 100%;
             width: 100%;
@@ -86,7 +86,7 @@ body {
         background: #02026d;
         color: #fff;
         padding: 2rem 0;
-    
+
         .hamburger {
             position: absolute;
             color: #fff;
@@ -101,51 +101,55 @@ body {
             align-items: center;
             padding: 0 10px;
             cursor: pointer;
-    
+
             &:hover {
                 opacity: 0.9;
             }
-    
-            .top, .mid, .bot {
+
+            .top,
+            .mid,
+            .bot {
                 background: #fff;
                 height: 2px;
                 width: 100%;
                 margin: 2.5px 0;
             }
         }
-    
+
         .header-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 2rem;
-        
+
             h3 {
                 margin: 1rem;
             }
-        
+
             .sign-up {
                 @extend %btn;
-        
+
                 &:hover {
                     opacity: 0.9;
                 }
             }
-        
+
         }
     }
-    
-    
+
+
     .main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    
-        h3, p, ul {
+
+        h3,
+        p,
+        ul {
             margin: .5rem 0;
         }
-    
+
         ul {
             li {
                 margin-left: 3rem;
@@ -176,7 +180,7 @@ body {
         transition: all 1s;
         visibility: hidden;
         opacity: 0;
-    
+
         .modal-title {
             background: #02026d;
             padding: 1rem;
@@ -216,7 +220,7 @@ body {
         h4 {
             padding: 1rem;
         }
-    
+
         .form {
             display: flex;
             flex-direction: column;
@@ -233,10 +237,7 @@ body {
             margin-bottom: 1rem;
             margin-left: 1rem;
         }
-    
+
     }
 
 }
-
-
-

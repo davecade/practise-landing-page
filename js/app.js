@@ -17,7 +17,7 @@ const App = (() => {
         signUpEl.addEventListener('click', toggleModal)
 
         modalEl.addEventListener('click', (event) => {
-            if(event.target.matches(".modal")) {
+            if (event.target.matches(".modal")) {
                 toggleModal(event);
             }
         })
@@ -25,7 +25,7 @@ const App = (() => {
 
     // -- Methods
     const toggleSlider = () => {
-        if(sliderEl.style.left == '-200px' && mainPageEl.style.left == '0px') {
+        if (sliderEl.style.left == '-200px' && mainPageEl.style.left == '0px') {
             sliderEl.style.left = "0px";
             mainPageEl.style.left = "200px"
         } else {
@@ -34,14 +34,14 @@ const App = (() => {
         }
     }
 
-    const toggleModal =(event = null) => {
-        
-        if(modalEl.style.visibility == 'hidden' && modalContentEl.style.visibility == 'hidden') {
+    const toggleModal = (event = null) => {
+
+        if (modalEl.style.visibility == 'hidden' && modalContentEl.style.visibility == 'hidden') {
 
             console.log(event.target)
-            if(event.target.matches(".modal")) {
+            if (event.target.matches(".modal")) {
 
-                if(canClick === true) {
+                if (canClick === true) {
                     modalEl.style.visibility = "visible";
                     modalEl.style.opacity = "1";
                     modalContentEl.style.visibility = "visible";
@@ -60,9 +60,9 @@ const App = (() => {
             }
 
         } else if (modalEl.style.visibility == 'visible' && modalContentEl.style.visibility == 'visible') {
-            
-            if(event.target.matches(".modal")) {
-                if(canClick === true) {
+
+            if (event.target.matches(".modal")) {
+                if (canClick === true) {
                     modalEl.style.visibility = 'hidden';
                     modalEl.style.opacity = "0";
                     modalContentEl.style.visibility = 'hidden';
@@ -79,7 +79,6 @@ const App = (() => {
                 modalContentEl.style.visibility = 'hidden';
                 modalContentEl.style.opacity = "0";
             }
-            
 
         }
     }
